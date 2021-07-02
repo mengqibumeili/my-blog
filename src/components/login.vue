@@ -1,5 +1,18 @@
 <template>
   <div class="login_container">
+    <div class="photo_wall">
+      <img src="../assets/img/cat1.jpg" alt="">
+      <img src="../assets/img/cat2.jpg" alt="">
+      <img src="../assets/img/cat3.jpg" alt="">
+      <img src="../assets/img/cat4.jpg" alt="">
+      <img src="../assets/img/cat5.jpg" alt="">
+    </div>
+
+    <!-- 标题 -->
+    <div class="title">
+      <h1>My Blog</h1>
+    </div>
+
     <div class="login_box">
       <!-- 登录表单区域 -->
       <el-form :model="loginForm" :rules="loginFormRules" ref="loginFormRef" label-width="80px" class="login_form">
@@ -77,6 +90,30 @@ export default {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  .photo_wall{
+    position: absolute;
+    width: 700px;
+    // 
+    margin-top: 10%;
+    margin-left:5%;
+    background-color: rgba(255, 255, 255, 0.514);
+    padding: 20px;
+    img{
+      width: 30%;
+      margin-left: 20px;
+    }
+  }
+  .title{
+    position: absolute;
+    left:80%;
+    top:20%;
+    transform: translate(-50%,-50%);
+    font-size: 40px;
+    border:3px solid #fff;
+    border-bottom:8px solid #fff;
+    padding:20px;
+
+  }
 }
 .login_box {
   width: 450px;
@@ -84,8 +121,8 @@ export default {
   background-color: rgba(236, 241, 245, 0.808);
   border-radius: 3px;
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 80%;
+  top: 68%;
   transform: translate(-50%, -50%);
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 }

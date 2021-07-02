@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Artical from '../components/artical.vue'
 import Login from '../components/login.vue'
+import Detail from '../components/detail.vue'
 
 Vue.use(VueRouter)
 
@@ -13,10 +14,13 @@ const routes = [
     component: Home,
     redirect: '/artical',
     children:[
-      {path:'/artical',component:Artical}
+      {path:'/artical',component:Artical},
+      {path:'/detail',component:Detail},
+
     ]
   },
-  {path:'/login',component:Login}
+  {path:'/login',component:Login},
+ 
  
 ]
 
