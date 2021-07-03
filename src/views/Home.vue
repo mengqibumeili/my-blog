@@ -9,7 +9,7 @@
           <ul>
             <li class="tabitems" @click="toHome"><span>首页</span></li>
             <li class="tabitems"><span>博文管理</span></li>
-            <li class="tabitems" ><span>创作</span></li>
+            <li class="tabitems" @click="toEditor"><span>创作</span></li>
             <li class="tabitems" @click="toLogin"><span>登录</span></li>
           </ul>
         </div>
@@ -104,6 +104,9 @@ export default {
     toHome(){
       this.$router.push('./')
     },
+    toEditor(){
+      this.$router.push('./')
+    }
     
   }
 }
